@@ -1,0 +1,448 @@
+---
+format:
+  revealjs: 
+    slide-number: c/t
+    progress: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: img/LASERlogo_large.png
+    theme: [default, css/laser.scss]
+    width: 1920
+    height: 1080
+    margin: 0.05
+    footer: <a href=https://www.fi.ncsu.edu/projects/laser-institute>LASER Institute
+resources:
+  - demo.pdf
+---
+
+<h1> <br> Replace with slidedeck title  </h1>
+
+<h2> Replace with method like Foundations : Conceptual Overview - Module 1 </h2>
+
+<hr>
+
+<h3> Replace with author(s) name </h3>
+
+<h3> Replace with date </h3>
+<br>
+
+[github.com/Foundations 2024](https://github.com/laser-institute/Foundations_BEAM_2023)
+ 
+ ![](img/LASERLogoB.png){.absolute top=425 left=1000 width="800"}
+
+## Welcome to Foundations of Learning Analytics (change to your methods)
+
+> `Foundations of Learning Analytics` are designed for those seeking an introductory understanding of learning analytics and either basic R programming skills or basic Python skills, particularly in the context of STEM education research.
+
+<br/>
+
+It consists of consists of four modules. Each module of the Foundation of LA includes: 
+
+. . .
+
+::: {.fragment .fade-in-then-semi-out}
+  - Selected readings
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  - Conceptual overview slidedeck
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  - Code a-long slidedeck 
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  - Case study activity that correlates with the Learning Analytics workflow
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  - Optional badge activity
+:::
+
+. . .
+
+<br/>
+
+## Module Objectives - change to your module objectives
+
+. . .
+
+* Understanding Types of `Learning Environments`:
+  - By the end of this module, learners will be able to identify and describe different types of learning environments, explaining their unique features and applications in educational research.
+
+. . .
+
+* Characteristics of `Data`:
+  - Learners will gain proficiency in recognizing and categorizing various data formats commonly used in educational research by the end of this section.
+
+. . .
+
+:::{.notes}
+ 
+add notes for the slides here
+
+:::
+
+## Pretty Code {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+  })
+}
+```
+
+::: footer
+Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
+:::
+
+## Code Animations {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+    barplot(WorldPhones[,input$region]*1000, 
+            main=input$region,
+            ylab="Number of Telephones",
+            xlab="Year")
+  })
+}
+```
+
+::: footer
+Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
+:::
+
+## Line Highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
+:::
+
+## Executable Code
+
+```{r}
+#| echo: true
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+::: footer
+Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+## LaTeX Equations
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+
+::: {.column width="60%"}
+```{=tex}
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+```
+```{=tex}
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+:::
+
+::: footer
+Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+:::
+
+## Column Layout {.smaller}
+
+Arrange content into columns of varying widths:
+
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
+:::
+:::
+
+::: footer
+Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
+:::
+
+## Incremental Lists
+
+Lists can optionally be displayed incrementally:
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+
+::: footer
+Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#incremental-lists)
+:::
+
+## Fragments
+
+Incremental text display and animation with fragments:
+
+<br/>
+
+::: {.fragment .fade-in}
+Fade in
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+::: {.fragment .fade-left}
+Slide left while fading in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in then semi out
+:::
+
+. . .
+
+::: {.fragment .strike}
+Strike
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: footer
+Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)
+:::
+
+## Slide Backgrounds {background="#43464B"}
+
+Set the `background` attribute on a slide to change the background color (all CSS color formats are supported).
+
+Different background transitions are available via the `background-transition` option.
+
+::: footer
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+:::
+
+## Media Backgrounds {background="#43464B" background-image="img/milky-way.jpeg"}
+
+You can also use the following as a slide background:
+
+-   An image: `background-image`
+
+-   A video: `background-video`
+
+-   An iframe: `background-iframe`
+
+::: footer
+Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
+:::
+
+## Absolute Position
+
+Position images or other elements at precise locations
+
+![](img/LASERIcon.jpg){.absolute top="170" left="30" width="1250"}
+
+![](img/foundations_la_hex.png){.absolute .fragment top="150" right="50" width="650"}
+
+![](img/laser_hex.png){.absolute .fragment bottom="110" right="130" width="300"}
+
+::: footer
+Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
+:::
+
+## Slide Transitions {.smaller}
+
+The next few slides will transition using the `slide` transition
+
+| Transition | Description                                                            |
+|------------|------------------------------------------------------------------------|
+| `none`     | No transition (default, switch instantly)                              |
+| `fade`     | Cross fade                                                             |
+| `slide`    | Slide horizontally                                                     |
+| `convex`   | Slide at a convex angle                                                |
+| `concave`  | Slide at a concave angle                                               |
+| `zoom`     | Scale the incoming slide so it grows in from the center of the screen. |
+
+::: footer
+Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
+:::
+
+## Tabsets {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Plot
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+### Data
+
+```{r}
+knitr::kable(mtcars)
+```
+:::
+
+::: footer
+Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
+:::
+
+## Interactive Slides {.smaller transition="slide"}
+
+Include Jupyter widgets and htmlwidgets in your presentations
+
+```{r}
+#| echo: false
+#| fig-height: 5
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+```
+
+::: footer
+Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
+:::
+
+## Preview Links
+
+Navigate to hyperlinks without disrupting the flow of your presentation.
+
+Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
+
+::: {style="text-align: center; margin-top: 1em"}
+[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+:::
+
+::: footer
+Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
+:::
+
+## Easy Navigation
+
+::: {style="margin-bottom: 0.9em;"}
+Quickly jump to other parts of your presentation
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-menu.png){width="41"}
+
+Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
+:::
+
+You can also press `m` to toggle the menu open and closed.
+
+::: footer
+Learn more: [Navigation](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)
+:::
+
+## And More...
+
+-   [Touch](https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation) optimized (presentations look great on mobile, swipe to navigate slides)
+-   [Footer & Logo](https://quarto.org/docs/presentations/revealjs/#footer-logo) (optionally specify custom footer per-slide)
+-   [Auto-Slide](https://quarto.org/docs/presentations/revealjs/presenting.html#auto-slide) (step through slides automatically, without any user input)
+-   [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex) (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).
+
+::: footer
+Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+## {background="#143156"}
+
+::: {style="text-align: left; margin-top: 1em; font-size: 160px"}
+
+**What's next?**
+
+:::
+
+<br/><br/><br/><br/><br/>
+
+
+::: {style="text-align: left; font-size: 50px"}
+
+- Complete `Prepare part of the Case Study`
+- Complete the R Programming primer: [Work with Data](https://rstudio.cloud/learn/primers/2)
+- Complete the Badge requirement document [Foundations badge - Data Sources](https://laser-institute.github.io/LASER_Foundations_2023/lab1/found-lab-1-badge.html)
+- Do pre-readings for tomorrow.
+
+:::
