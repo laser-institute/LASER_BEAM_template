@@ -21,7 +21,7 @@ Use this template when creating LASER BEAM slides: both conceptual and code-alon
 
 Use this example as a template when creating quarto documents.
 
-![](img/ccomons.png){width="150"}
+![](img/ccomons.png){width="150px"}
 
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms. CC BY-NC-SA includes the following elements:
 

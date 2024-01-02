@@ -16,15 +16,15 @@ resources:
   - demo.pdf
 ---
 
-<h1> <br> Replace with slidedeck title  </h1>
+<h1> <br> Slidedeck title  </h1>
 
-<h2> Replace with method like Foundations : Conceptual Overview - Module 1 </h2>
+<h2> Methods: Conceptual Overview - Module 1 </h2>
 
 <hr>
 
-<h3> Replace with author(s) name </h3>
+<h3> Author(s) name </h3>
 
-<h3> Replace with date </h3>
+<h3> Date </h3>
 <br>
 
 [github.com/Foundations 2024](https://github.com/laser-institute/Foundations_BEAM_2023)
@@ -37,7 +37,7 @@ resources:
 
 <br/>
 
-It consists of consists of four modules. Each module of the Foundation of LA includes: 
+It consists of four modules. Each module of the Foundation of LA includes: 
 
 . . .
 
@@ -65,6 +65,8 @@ It consists of consists of four modules. Each module of the Foundation of LA inc
 
 <br/>
 
+This is an example of the module introduction
+
 ## Module Objectives - change to your module objectives
 
 . . .
@@ -84,6 +86,10 @@ It consists of consists of four modules. Each module of the Foundation of LA inc
 add notes for the slides here
 
 :::
+
+<br/><br/><br/>
+
+**This is an example of the module objective**
 
 ## Pretty Code {auto-animate="true"}
 
@@ -435,7 +441,7 @@ Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealj
 
 :::
 
-<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/>
 
 
 ::: {style="text-align: left; font-size: 50px"}
